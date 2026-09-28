@@ -2,263 +2,174 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Anisha Jain — Chartered Actuary</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anisha Jain | Chartered Actuary</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --paper: #F8F6F0;
-    --paper-2: #F1EEE4;
-    --ink: #1B2A2E;
-    --ink-soft: #4A5A5C;
-    --teal: #2F5E56;
-    --teal-deep: #1E3F3A;
-    --rule: #C9C3B2;
-    --gold: #A97D3E;
-    padding-top: env(safe-area-inset-top, 0px);
-    padding-bottom: env(safe-area-inset-bottom, 0px);
+    --bg: #06090e;
+    --card: rgba(255, 255, 255, 0.03);
+    --border: rgba(255, 255, 255, 0.08);
+    --accent: #00f2fe;
+    --accent-glow: rgba(0, 242, 254, 0.25);
+    --text: #f1f5f9;
+    --muted: #94a3b8;
   }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --paper: #14201F;
-      --paper-2: #1B2926;
-      --ink: #EDEAE0;
-      --ink-soft: #AEB8B2;
-      --teal: #6FA89A;
-      --teal-deep: #8FC4B6;
-      --rule: #37453F;
-      --gold: #D3A567;
-    }
-  }
-  * { box-sizing: border-box; }
-  html { scroll-padding-top: env(safe-area-inset-top, 0px); scroll-behavior: smooth; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    margin: 0;
-    background: var(--paper);
-    color: var(--ink);
-    font-family: 'IBM Plex Sans', system-ui, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    line-height: 1.55;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    position: relative;
+    padding: 24px;
   }
-  h1, h2, h3, .serif { font-family: 'Source Serif 4', Georgia, serif; }
-  .wrap { max-width: 920px; margin: 0 auto; padding: 0 28px; }
-  a { color: inherit; }
+  .orb {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: 0;
+    pointer-events: none;
+  }
+  .orb-1 { width: 420px; height: 420px; background: #0052d4; top: -10%; left: -10%; opacity: 0.35; }
+  .orb-2 { width: 380px; height: 380px; background: #4364f7; bottom: -10%; right: -10%; opacity: 0.3; }
+  .orb-3 { width: 300px; height: 300px; background: #6fb1fc; top: 40%; right: 20%; opacity: 0.15; }
 
-  header.top {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 22px 28px; max-width: 920px; margin: 0 auto;
-    border-bottom: 1px solid var(--rule);
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 820px;
+    width: 100%;
+    backdrop-filter: blur(24px);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    padding: 64px 54px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
   }
-  header.top .mark { font-family: 'Source Serif 4', serif; font-size: 1.05rem; letter-spacing: 0.01em; }
-  header.top nav { display: flex; gap: 28px; font-size: 0.92rem; }
-  header.top nav a { text-decoration: none; color: var(--ink-soft); }
-  header.top nav a:hover { color: var(--teal); }
-  header.top nav a:focus-visible, a:focus-visible, button:focus-visible {
-    outline: 2px solid var(--teal); outline-offset: 3px;
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    border-radius: 100px;
+    background: rgba(0, 242, 254, 0.08);
+    border: 1px solid rgba(0, 242, 254, 0.3);
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
   }
-
-  .hero { padding: 84px 0 64px; }
-  .hero .kicker { color: var(--ink-soft); font-size: 0.95rem; margin: 0 0 14px; }
-  .hero h1 {
-    font-size: clamp(2.1rem, 5vw, 3.3rem);
-    line-height: 1.12; font-weight: 500; margin: 0 0 22px; max-width: 15ch;
+  .badge::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 10px var(--accent);
   }
-  .hero p.lede { font-size: 1.15rem; color: var(--ink-soft); max-width: 56ch; margin: 0 0 34px; }
-  .cta-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  h1 {
+    font-size: clamp(2.8rem, 6vw, 4.4rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    background: linear-gradient(135deg, #ffffff 40%, var(--muted) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 12px;
+  }
+  .subtitle {
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    color: var(--accent);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    margin-bottom: 24px;
+  }
+  p.desc {
+    color: var(--muted);
+    font-size: 1.08rem;
+    line-height: 1.7;
+    max-width: 620px;
+    margin-bottom: 40px;
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 44px;
+  }
+  .tag {
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    font-size: 0.88rem;
+    color: #cbd5e1;
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
   .btn {
-    display: inline-flex; align-items: center; gap: 10px;
-    padding: 13px 24px; border-radius: 3px; text-decoration: none;
-    font-size: 0.98rem; font-weight: 500; border: 1px solid transparent;
-    transition: transform 0.15s ease, background 0.15s ease;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 0.96rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease;
   }
-  .btn-primary { background: var(--teal); color: var(--paper); }
-  .btn-primary:hover { background: var(--teal-deep); transform: translateY(-1px); }
-  .btn-ghost { border-color: var(--rule); color: var(--ink); }
-  .btn-ghost:hover { border-color: var(--teal); color: var(--teal); }
-
-  .ledger-line { border: none; border-top: 1px solid var(--rule); margin: 0; }
-
-  section { padding: 64px 0; }
-  section.tight { padding: 48px 0; }
-  .eyebrow-num {
-    display: flex; align-items: baseline; gap: 14px; margin-bottom: 30px;
+  .btn-primary {
+    background: var(--text);
+    color: var(--bg);
   }
-  .eyebrow-num .idx { font-family: 'Source Serif 4', serif; color: var(--gold); font-size: 1rem; }
-  .eyebrow-num h2 { margin: 0; font-size: 1.6rem; font-weight: 500; }
-
-  .about-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; }
-  .about-grid p { color: var(--ink-soft); margin: 0 0 16px; }
-  .fact-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
-  .fact-list li {
-    display: flex; justify-content: space-between; gap: 12px;
-    padding: 12px 0; border-bottom: 1px solid var(--rule); font-size: 0.92rem;
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(255, 255, 255, 0.2);
   }
-  .fact-list span:first-child { color: var(--ink-soft); }
-  .fact-list span:last-child { text-align: right; font-weight: 500; }
-
-  .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 56px; }
-  .service-col h3 {
-    font-size: 1.15rem; font-weight: 500; margin: 0 0 6px; color: var(--teal);
+  .btn-ghost {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
   }
-  .service-col .sub { color: var(--ink-soft); font-size: 0.9rem; margin: 0 0 20px; }
-  .service-col ul { list-style: none; margin: 0; padding: 0; }
-  .service-col li {
-    padding: 16px 0; border-top: 1px solid var(--rule);
-    font-size: 0.98rem;
+  .btn-ghost:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
   }
-  .service-col li:last-child { border-bottom: 1px solid var(--rule); }
-  .service-col li strong { display: block; margin-bottom: 4px; font-weight: 500; }
-  .service-col li span { color: var(--ink-soft); font-size: 0.9rem; }
-
-  .exp-row {
-    display: grid; grid-template-columns: 190px 1fr; gap: 20px;
-    padding: 20px 0; border-top: 1px solid var(--rule);
-  }
-  .exp-row:last-child { border-bottom: 1px solid var(--rule); }
-  .exp-row .when { color: var(--ink-soft); font-size: 0.85rem; padding-top: 3px; }
-  .exp-row .what strong { font-weight: 600; }
-  .exp-row .what .role { color: var(--ink-soft); font-size: 0.9rem; }
-
-  .cta-band {
-    background: var(--teal-deep); color: var(--paper); border-radius: 4px;
-    padding: 52px 40px; text-align: left;
-  }
-  .cta-band h2 { margin: 0 0 12px; font-size: 1.7rem; font-weight: 500; color: var(--paper); }
-  .cta-band p { color: #D8E4DF; max-width: 48ch; margin: 0 0 28px; }
-  .cta-band .btn-primary { background: var(--paper); color: var(--teal-deep); }
-  .cta-band .btn-primary:hover { background: #fff; }
-
-  footer { padding: 36px 0 60px; color: var(--ink-soft); font-size: 0.85rem; }
-  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
-
-  @media (max-width: 720px) {
-    .about-grid, .services-grid { grid-template-columns: 1fr; }
-    .exp-row { grid-template-columns: 1fr; gap: 4px; }
-    header.top nav { display: none; }
+  @media (max-width: 640px) {
+    .container { padding: 36px 24px; }
   }
 </style>
 </head>
 <body>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
 
-<header class="top">
-  <div class="mark">Anisha Jain</div>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<div class="wrap">
-  <section class="hero">
-    <p class="kicker">Fellow, Institute and Faculty of Actuaries</p>
-    <h1>Actuarial precision, applied to financial decisions that matter.</h1>
-    <p class="lede">Six years across treasury, actuarial consulting, and financial advisory in Australia, India, the UK and the US — helping organisations price risk, model with confidence, and report with clarity.</p>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="mailto:anishajain3015@gmail.com?subject=Schedule%20a%20call&body=Hi%20Anisha%2C%0A%0AI'd%20like%20to%20schedule%20a%20call%20to%20discuss%3A%0A%0A">Schedule a call</a>
-      <a class="btn btn-ghost" href="#services">See what I offer</a>
-    </div>
-  </section>
-</div>
-
-<hr class="ledger-line">
-
-<div class="wrap">
-  <section id="about">
-    <div class="eyebrow-num"><span class="idx">01</span><h2>About</h2></div>
-    <div class="about-grid">
-      <div>
-        <p>I'm a Chartered Actuary (FIA) with a career built at the intersection of numbers and decisions — pricing models at a law firm, risk frameworks at a toll-road treasury, and AASB reporting for insurers and super funds along the way.</p>
-        <p>What ties it together is a habit of turning complex financial and actuarial problems into models and reports that stakeholders can actually act on — and a track record of doing that across four countries and just as many regulatory regimes.</p>
-        <p>Outside formal mandates, I mentor junior analysts and enjoy the unglamorous work of building better model governance from the ground up.</p>
-      </div>
-      <ul class="fact-list">
-        <li><span>Based in</span><span>Melbourne, Australia</span></li>
-        <li><span>Qualification</span><span>Fellow, IFoA (2025–26)</span></li>
-        <li><span>Experience</span><span>6 years, 4 countries</span></li>
-        <li><span>Tools</span><span>Excel/VBA, Python, R, SQL</span></li>
-        <li><span>Email</span><span>anishajain3015@gmail.com</span></li>
-        <li><span>Phone</span><span>+61 451 663 085</span></li>
-        <li><span>LinkedIn</span><span><a href="https://www.linkedin.com/in/anisha-jain-fia-5b268b218/" target="_blank" rel="noopener">in/anisha-jain-fia</a></span></li>
-      </ul>
-    </div>
-  </section>
-</div>
-
-<hr class="ledger-line">
-
-<div class="wrap">
-  <section id="services">
-    <div class="eyebrow-num"><span class="idx">02</span><h2>Services</h2></div>
-    <div class="services-grid">
-      <div class="service-col">
-        <h3>Actuarial services</h3>
-        <p class="sub">Pricing, reserving and regulatory reporting</p>
-        <ul>
-          <li><strong>Product pricing &amp; forecasting</strong><span>Statistical pricing models for insurance and service-line products.</span></li>
-          <li><strong>AASB 17 &amp; AASB 119 reporting</strong><span>Insurance contract and employee benefit valuations for insurers and super funds.</span></li>
-          <li><strong>Reserving &amp; valuation</strong><span>Pension and life insurance valuation models, WIP valuation under AASB 15.</span></li>
-          <li><strong>Model review &amp; governance</strong><span>Independent peer review of actuarial models against best-practice standards.</span></li>
-        </ul>
-      </div>
-      <div class="service-col">
-        <h3>Financial services</h3>
-        <p class="sub">Treasury, risk and financial reporting</p>
-        <ul>
-          <li><strong>Treasury reporting</strong><span>Monthly reporting packs for internal and external stakeholders.</span></li>
-          <li><strong>Risk measurement frameworks</strong><span>Credit, FX, liquidity, interest rate and operational risk monitoring.</span></li>
-          <li><strong>Financial model automation</strong><span>Building and automating models to cut manual effort and improve data quality.</span></li>
-          <li><strong>Compliance &amp; recovery planning</strong><span>Reviews against APRA CPS 190 and audit-readiness support.</span></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-</div>
-
-<hr class="ledger-line">
-
-<div class="wrap">
-  <section id="experience">
-    <div class="eyebrow-num"><span class="idx">03</span><h2>Experience</h2></div>
-
-    <div class="exp-row">
-      <div class="when">2026 — Present</div>
-      <div class="what"><strong>Pricing Analyst</strong><div class="role">Slater and Gordon, Melbourne</div></div>
-    </div>
-    <div class="exp-row">
-      <div class="when">2025 — 2026</div>
-      <div class="what"><strong>Treasury Senior Analyst</strong><div class="role">Transurban, Melbourne</div></div>
-    </div>
-    <div class="exp-row">
-      <div class="when">2023 — 2025</div>
-      <div class="what"><strong>Actuarial Analyst</strong><div class="role">McGing Advisory and Actuarial, Melbourne</div></div>
-    </div>
-    <div class="exp-row">
-      <div class="when">2021 — 2022</div>
-      <div class="what"><strong>Actuarial Analyst, Life Insurance</strong><div class="role">Xceedance, Delhi</div></div>
-    </div>
-  </section>
-</div>
-
-<div class="wrap">
-  <section class="tight" id="contact">
-    <div class="cta-band">
-      <h2>Let's talk about your next model or mandate.</h2>
-      <p>Whether it's a pricing model, a risk framework, or a regulatory report that needs an actuarial eye — happy to have a first conversation.</p>
-      <a class="btn btn-primary" href="mailto:anishajain3015@gmail.com?subject=Schedule%20a%20call&body=Hi%20Anisha%2C%0A%0AI'd%20like%20to%20schedule%20a%20call%20to%20discuss%3A%0A%0A">Schedule a call</a>
-    </div>
-  </section>
-</div>
-
-<footer>
-  <div class="wrap">
-    <span>Anisha Jain, FIA — Melbourne, Australia</span>
-    <span>anishajain3015@gmail.com · +61 451 663 085 · <a href="https://www.linkedin.com/in/anisha-jain-fia-5b268b218/" target="_blank" rel="noopener">LinkedIn</a></span>
+<div class="container">
+  <div class="badge">Institute &amp; Faculty of Actuaries (FIA)</div>
+  <h1>Anisha Jain</h1>
+  <div class="subtitle">Chartered Actuary &amp; Quantitative Advisory</div>
+  <p class="desc">
+    Bridging complex mathematical risk models and strategic capital decisions across pricing, corporate treasury, and AASB 17 frameworks.
+  </p>
+  <div class="tags">
+    <span class="tag">Capital &amp; Reserving</span>
+    <span class="tag">Product Pricing</span>
+    <span class="tag">Treasury Analytics</span>
+    <span class="tag">Model Governance</span>
   </div>
-</footer>
-
+  <div class="actions">
+    <a href="mailto:anishajain3015@gmail.com" class="btn btn-primary">Initiate Mandate</a>
+    <a href="https://www.linkedin.com/in/anisha-jain-fia-5b268b218/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn Profile</a>
+  </div>
+</div>
 </body>
 </html>
