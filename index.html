@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,4 +46,98 @@ li{margin:.3rem 0}
 .ex span{font-size:.8rem;border:1px solid var(--ln);background:var(--bg);padding:.1rem .55rem;color:var(--ac)}
 .ct{display:grid;grid-template-columns:1.6fr 1fr;gap:3rem;align-items:start}
 form{background:var(--bg);border:1px solid var(--ln);padding:2rem;display:grid;gap:1.1rem}
-label{display:grid
+label{display:grid;gap:.35rem;font-size:.85rem;color:var(--mu)}
+input,select,textarea{font:inherit;font-size:1rem;color:var(--tx);border:1px solid var(--ln);background:var(--bg);padding:.65rem .75rem;border-radius:2px;width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--ac);outline-offset:1px}
+button{font:500 1rem var(--sans);background:var(--ac);color:#fff;border:0;padding:.85rem 1.5rem;cursor:pointer;justify-self:start}
+button:hover{background:#16304f}
+.hint{font-size:.8rem;color:var(--mu)}
+.dir p{margin-top:.6rem}
+.dir a{color:var(--ac);text-decoration:none;border-bottom:1px solid var(--ln)}
+footer{text-align:center;font-size:.8rem;color:var(--mu);padding:2rem;border-top:1px solid var(--ln)}
+a:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+.rv{opacity:0;transition:opacity .8s}.rv.in{opacity:1}
+@media(max-width:760px){.ct{grid-template-columns:1fr}form{padding:1.25rem}.row{grid-template-columns:1fr;gap:.5rem}nav{padding:.9rem 1.25rem}nav div{gap:1rem}nav b{display:none}section.w{padding:4.5rem 1.25rem}}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transition:none}nav{transition:none}}
+</style>
+</head>
+<body>
+<nav id="nav"><b>Anisha Jain</b><div><a href="#services">Services</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Get in touch</a></div></nav>
+
+<section id="hero">
+  <div>
+    <h1>Anisha Jain</h1>
+    <div class="rule"></div>
+    <div class="role">Chartered Actuary</div>
+  </div>
+</section>
+
+<section class="w" id="services">
+  <h2 class="rv">Services</h2>
+  <p class="sub rv">Six service areas, based on work across actuarial consulting, treasury, pricing and financial advisory.</p>
+  <div class="svc rv">
+    <div><h3>Actuarial modelling and reporting</h3><p>Actuarial valuations and reporting under Australian accounting standards, with the supporting models.</p><ul><li>AASB 17 reporting for friendly societies</li><li>AASB 119 valuation of employee benefit obligations</li><li>Climate change reporting for multinational clients</li><li>Pension valuation models for government organisations</li><li>Reserving and reporting for life insurance plans</li></ul></div>
+    <div><h3>Financial modelling</h3><p>Financial models of any type, designed and built to best-practice standards.</p><ul><li>Model design, build and documentation</li><li>Peer review of financial models</li><li>Modelling standards and training for finance teams</li><li>Treasury, pricing, valuation and reporting models</li></ul></div>
+    <div><h3>Risk management services</h3><p>Risk measurement frameworks and policy support, with regular reporting.</p><ul><li>Frameworks covering credit, foreign exchange, liquidity, interest rate and operational risk</li><li>Treasury risk management policy development and enhancement</li><li>Monthly treasury reporting for internal and external stakeholders</li></ul></div>
+    <div><h3>Pricing</h3><p>Pricing for legal services and life insurance, based on work at Slater and Gordon and Xceedance.</p><ul><li>Legal services: pricing models and statistical forecasts for personal injury service lines, covering fee structures and margins</li><li>Legal services: matter-level WIP valuation under AASB 15, and pricing governance and approval workflows</li><li>Life insurance: pricing of life and critical illness products</li><li>Life insurance: market research, mortality analysis, competitive analysis, and reserving and reporting for German plans</li></ul></div>
+    <div><h3>Automation</h3><p>Automated models, datasets and dashboards, built in Excel (including VBA), Python, R and SQL.</p><ul><li>Automated treasury and reporting models</li><li>Dashboards tracking realisation, discount leakage and WIP velocity</li><li>Less manual effort and better data quality</li></ul></div>
+    <div><h3>Regulatory and compliance</h3><p>Independent actuarial and financial reviews of arrangements, plans, models and reports.</p><ul><li>Analysis of superannuation fund insurance arrangements, with recommendations</li><li>Recovery and exit plan reviews against APRA CPS 190 good practice</li><li>Peer review of financial models and reports</li><li>AASB 15 WIP valuation and audit readiness</li></ul></div>
+  </div>
+</section>
+
+<div class="alt"><section class="w" id="experience">
+  <h2 class="rv">Experience</h2>
+  <p class="sub rv">Roles in actuarial consulting, treasury, pricing and financial advisory.</p>
+  <div>
+    <div class="row rv"><div class="d"><strong>Jul 2026 – Present</strong>Melbourne, Australia</div><div><h3>Pricing Analyst</h3><div class="at">Slater and Gordon</div><ul><li>Developed pricing models and statistical forecasts for personal injury service lines to optimise fee structures and margins.</li><li>Managed matter-level WIP valuation under AASB 15, partnering with Financial Control on audit readiness and compliance.</li><li>Built automated reporting dashboards and datasets to track realisation, discount leakage and WIP velocity for finance leadership.</li><li>Partnered with General Managers and practice leaders to present insights, drive pricing governance and manage approval workflows.</li></ul></div></div>
+    <div class="row rv"><div class="d"><strong>Sep 2025 – Jun 2026</strong>Melbourne, Australia</div><div><h3>Treasury Senior Analyst</h3><div class="at">Transurban</div><ul><li>Delivered monthly treasury reporting for internal and external stakeholders.</li><li>Contributed to the development and enhancement of treasury risk management policies.</li><li>Built risk measurement frameworks to monitor exposure across credit, foreign exchange, liquidity, interest rate and operational risk.</li><li>Designed and automated treasury models to improve process efficiency, enhance data quality and reduce manual effort.</li><li>Managed and supported junior team members, coordinating tasks across the broader treasury team.</li><li>Upskilled the treasury team in financial modelling by introducing best-practice modelling standards.</li></ul></div></div>
+    <div class="row rv"><div class="d"><strong>Jun 2023 – Sep 2025</strong>Melbourne, Australia</div><div><h3>Actuarial Analyst</h3><div class="at">McGing Advisory and Actuarial</div><ul><li>Partnered with Mercer on AASB 17 reporting for friendly societies.</li><li>Completed climate change reporting for a multinational client.</li><li>Conducted AASB 119 reporting for clients, valuing employee benefit obligations.</li><li>Analysed the insurance arrangement for a superannuation fund, summarising key findings and recommendations for improvement.</li><li>Reviewed the Recovery and Exit Plan for the super fund, with recommendations to enhance compliance with APRA's CPS 190 good practice standards.</li><li>Developed a pension valuation model for a government organisation.</li><li>Peer-reviewed multiple projects, including financial models and reports.</li></ul></div></div>
+    <div class="row rv"><div class="d"><strong>Jul 2021 – Dec 2022</strong>Delhi, India</div><div><h3>Actuarial Analyst, Life Insurance</h3><div class="at">Xceedance</div><ul><li>Conducted pricing of life insurance and critical illness products.</li><li>Conducted market research, mortality analysis, modelling and competitive analysis, as well as reserving and reporting for German plans, to determine pricing strategies.</li><li>Analysed an underperforming insurance product in the market and communicated the findings to stakeholders.</li><li>Researched the impact of COVID-19 on mortality and longevity in European countries and evaluated the effectiveness of lockdowns in controlling deaths.</li><li>Assisted in preparing a platform for brokers and insurance companies, performing User Acceptance Testing (UAT) to confirm it met the required standards.</li></ul></div></div>
+    <div class="row rv"><div class="d"><strong>Dec 2020 – Jun 2021</strong>USA</div><div><h3>Purchasing Analyst Intern</h3><div class="at">Jack and Jill</div><ul><li>Researched potential products, comparing price and quality, using software tools to secure the best possible deals.</li><li>Managed a team of analysts, providing guidance and leadership and holding regular meetings to confirm responsibilities.</li></ul></div></div>
+    <div class="row rv"><div class="d"><strong>May – Aug 2020</strong>London, United Kingdom</div><div><h3>Business Analyst Intern</h3><div class="at">Fintract Global</div><ul><li>Researched financial instruments and macroeconomic concepts, contributing directly to a publication for industry audiences.</li><li>Helped structure and draft sections of the book showing how different user groups can use financial instruments.</li></ul></div></div>
+  </div>
+</section></div>
+
+<section class="w" id="education">
+  <h2 class="rv">Education</h2>
+  <div class="edu rv" style="margin-top:2.5rem">
+    <div><h3>Fellow, Institute and Faculty of Actuaries</h3><p>Chartered Actuary Fellow, 2025 – 2026. Exams cleared:</p><div class="ex"><span>CS1</span><span>CS2</span><span>CM1</span><span>CM2</span><span>CB1</span><span>CB2</span><span>CB3</span><span>CP1</span><span>CP2</span><span>CP3</span><span>SP2</span><span>SP5</span><span>SA2</span></div></div>
+    <div><h3>University of Delhi</h3><p>Graduation, 2018 – 2021. GPA 7.8.</p></div>
+  </div>
+</section>
+
+<div class="alt"><section class="w" id="contact">
+  <h2 class="rv">Get in touch</h2>
+  <p class="sub rv">Interested in working together, or just want to connect? Send a message and I will reply by email.</p>
+  <div class="ct rv">
+    <form id="f">
+      <label>Name<input id="n" required autocomplete="name"></label>
+      <label>Your email<input id="e" type="email" required autocomplete="email"></label>
+      <label>I am getting in touch about<select id="t"><option>Services enquiry</option><option>Connecting</option><option>Something else</option></select></label>
+      <label>Message<textarea id="m" rows="5" required></textarea></label>
+      <button type="submit">Send message</button>
+      <p class="hint">This opens your email app with the message ready to send.</p>
+    </form>
+    <div class="dir"><h3>Direct</h3>
+      <p><a href="mailto:anishajain3015@gmail.com">anishajain3015@gmail.com</a></p>
+      <p><a href="tel:+61451663085">+61 451 663 085</a></p>
+      <p><a href="https://www.linkedin.com/in/anisha-jain-fia-5b268b218/" target="_blank" rel="noopener">LinkedIn profile</a></p>
+      <p style="color:var(--mu)">Melbourne, Australia</p></div>
+  </div>
+</section></div>
+<footer>&copy; 2026 Anisha Jain &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/anisha-jain-fia-5b268b218/" target="_blank" rel="noopener" style="color:var(--ac)">LinkedIn</a></footer>
+
+<script>
+document.getElementById("f").addEventListener("submit",function(ev){ev.preventDefault();
+var g=function(i){return document.getElementById(i).value.trim()};
+var body="Name: "+g("n")+"\nEmail: "+g("e")+"\n\n"+g("m");
+location.href="mailto:anishajain3015@gmail.com?subject="+encodeURIComponent(g("t")+" - "+g("n"))+"&body="+encodeURIComponent(body)});
+var nav=document.getElementById("nav"),hero=document.getElementById("hero");
+function chk(){nav.classList.toggle("on",scrollY>hero.offsetHeight-80)}
+addEventListener("scroll",chk,{passive:true});chk();
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;e.target.classList.add("in");
+io.unobserve(e.target)})},{threshold:.12});
+document.querySelectorAll(".rv").forEach(function(n){io.observe(n)});
+</script>
+</body>
+</html>
