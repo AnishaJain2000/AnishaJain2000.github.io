@@ -6,59 +6,64 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Anisha Jain | Chartered Actuary</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#fff;--alt:#f5f6f8;--tx:#1c2433;--mu:#5b6475;--ac:#1f3a5f;--ln:#dfe3ea;
---serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;--sans:'Inter',system-ui,-apple-system,sans-serif;
+:root{--bg:#faf8f5;--stone:#f1ede5;--tx:#1a1f2b;--mu:#3f4859;--navy:#14213d;--gold:#9a7b4f;--gd:#7a5f33;--ln:#e4ded2;
+--head:'Playfair Display',Georgia,'Times New Roman',serif;--body:'Source Sans 3',system-ui,-apple-system,sans-serif;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
 html{scroll-behavior:smooth;scroll-padding-top:calc(4.5rem + env(safe-area-inset-top,0px))}
 *,*:before,*:after{box-sizing:inherit}
-body{margin:0;background:var(--bg);color:var(--tx);font:400 1rem/1.7 var(--sans)}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 1.1rem/1.7 var(--body)}
 h1,h2,h3,p{margin:0}
-nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;background:rgba(255,255,255,.94);border-bottom:1px solid var(--ln);transform:translateY(-110%);transition:transform .3s}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:.9rem 2rem;background:rgba(250,248,245,.96);border-bottom:1px solid var(--ln);transform:translateY(-110%);transition:transform .3s}
 nav.on{transform:none}
-nav b{font:500 1.35rem var(--serif);color:var(--ac)}
-nav div{display:flex;gap:1.75rem}
-nav a{color:var(--mu);text-decoration:none;font-size:.9rem}
-nav a:hover{color:var(--ac)}
-#hero{height:100vh;height:100svh;display:grid;place-items:center;text-align:center;background:var(--alt)}
-h1{font:500 clamp(3rem,10vw,7rem)/1.05 var(--serif);color:var(--ac);letter-spacing:-.01em}
-.rule{width:64px;height:1px;background:var(--ac);margin:1.75rem auto}
-.role{font-size:clamp(.95rem,2vw,1.15rem);color:var(--mu);letter-spacing:.14em}
+nav b{font:600 1.15rem var(--head);color:var(--navy)}
+nav div{display:flex;gap:1.6rem}
+nav a{color:var(--tx);text-decoration:none;font-size:1rem;font-weight:600}
+nav a:hover{color:var(--gd)}
+#hero{height:100vh;height:100svh;display:grid;place-items:center;text-align:center;background:linear-gradient(160deg,#fbf9f5,#efe9de 58%,#e3e8f0)}
+h1{font:500 clamp(3rem,10vw,6.6rem)/1.1 var(--head);color:var(--navy);letter-spacing:-.01em}
+.rule{width:80px;height:2px;background:var(--gold);margin:1.6rem auto}
+.role{font:400 clamp(1.1rem,2.5vw,1.45rem) var(--body);color:var(--mu);letter-spacing:.16em}
 section.w{padding:6rem 1.5rem;max-width:1040px;margin:0 auto}
-h2{font:500 clamp(2rem,4.5vw,3rem)/1.15 var(--serif);color:var(--ac);margin-bottom:.75rem}
+h2{font:500 clamp(2.1rem,4.5vw,3rem)/1.2 var(--head);color:var(--navy);margin-bottom:.75rem}
 .sub{color:var(--mu);max-width:58ch;margin-bottom:3rem}
-.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:2.5rem 3rem}
-.svc div{border-top:2px solid var(--ac);padding-top:1.1rem}
-h3{font:600 1.45rem/1.25 var(--serif);color:var(--tx)}
-.svc p{color:var(--mu);font-size:.95rem;margin:.5rem 0 .75rem}.svc ul{font-size:.9rem}
-.alt{background:var(--alt)}
-.row{display:grid;grid-template-columns:230px 1fr;gap:2rem;padding:2.25rem 0;border-top:1px solid var(--ln)}
-.d{color:var(--mu);font-size:.9rem}
-.d strong{display:block;font:600 1.3rem var(--serif);color:var(--ac)}
-.at{color:var(--ac);font-size:.95rem;margin:.15rem 0 .75rem;font-weight:500}
-ul{margin:0;padding-left:1.1rem;color:var(--mu);font-size:.95rem}
-li{margin:.3rem 0}
-.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:3rem}
-.edu>div{border-top:2px solid var(--ac);padding-top:1.1rem}
-.edu p{color:var(--mu);font-size:.95rem;margin-top:.4rem}
-.ex{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem}
-.ex span{font-size:.8rem;border:1px solid var(--ln);background:var(--bg);padding:.1rem .55rem;color:var(--ac)}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.5rem}
+.svc>div{background:#fff;border:1px solid var(--ln);border-top:3px solid var(--gold);border-radius:4px;padding:1.6rem}
+h3{font:600 1.25rem/1.3 var(--head);color:var(--navy)}
+.svc p{color:var(--mu);margin:.6rem 0 .8rem}
+.svc ul{font-size:1.02rem}
+li::marker{color:var(--gold)}
+.alt{background:var(--stone)}
+.row{display:grid;grid-template-columns:230px 1fr;gap:2rem;padding:1.75rem;margin-bottom:1.25rem;background:#fff;border:1px solid var(--ln);border-left:3px solid var(--gold);border-radius:4px}
+.d{color:var(--mu);font-size:1rem}
+.d strong{display:block;font:600 1.05rem var(--head);color:var(--navy)}
+.at{color:var(--gd);font-weight:600;margin:.2rem 0 .75rem}
+ul{margin:0;padding-left:1.15rem;color:var(--mu);font-size:1.05rem}
+li{margin:.35rem 0}
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+.edu>div{background:#fff;border:1px solid var(--ln);border-top:3px solid var(--gold);border-radius:4px;padding:1.6rem}
+.edu p{color:var(--mu);margin-top:.4rem}
+.ex{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1rem}
+.ex span{font:600 .9rem var(--body);background:var(--stone);border-radius:3px;padding:.1rem .65rem;color:var(--navy)}
+.ctbg{background:var(--navy)}
+.ctbg h2,.ctbg h3,.ctbg .dir p{color:#fff}
+.ctbg .sub{color:#d6dbe6}
 .ct{display:grid;grid-template-columns:1.6fr 1fr;gap:3rem;align-items:start}
-form{background:var(--bg);border:1px solid var(--ln);padding:2rem;display:grid;gap:1.1rem}
-label{display:grid;gap:.35rem;font-size:.85rem;color:var(--mu)}
-input,select,textarea{font:inherit;font-size:1rem;color:var(--tx);border:1px solid var(--ln);background:var(--bg);padding:.65rem .75rem;border-radius:2px;width:100%}
-input:focus,select:focus,textarea:focus{outline:2px solid var(--ac);outline-offset:1px}
-button{font:500 1rem var(--sans);background:var(--ac);color:#fff;border:0;padding:.85rem 1.5rem;cursor:pointer;justify-self:start}
-button:hover{background:#16304f}
-.hint{font-size:.8rem;color:var(--mu)}
-.dir p{margin-top:.6rem}
-.dir a{color:var(--ac);text-decoration:none;border-bottom:1px solid var(--ln)}
-footer{text-align:center;font-size:.8rem;color:var(--mu);padding:2rem;border-top:1px solid var(--ln)}
-a:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
-.rv{opacity:0;transition:opacity .8s}.rv.in{opacity:1}
-@media(max-width:760px){.ct{grid-template-columns:1fr}form{padding:1.25rem}.row{grid-template-columns:1fr;gap:.5rem}nav{padding:.9rem 1.25rem}nav div{gap:1rem}nav b{display:none}section.w{padding:4.5rem 1.25rem}}
-@media(prefers-reduced-motion:reduce){.rv{opacity:1;transition:none}nav{transition:none}}
+form{background:#fff;border-radius:4px;padding:2rem;display:grid;gap:1.1rem}
+label{display:grid;gap:.35rem;font-size:.95rem;font-weight:600;color:var(--tx)}
+input,select,textarea{font:inherit;font-size:1rem;color:var(--tx);border:1px solid #c9c2b4;background:#fff;padding:.7rem .8rem;border-radius:3px;width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--navy);outline-offset:1px}
+button{font:600 1rem var(--body);background:var(--navy);color:#fff;border:0;border-radius:3px;padding:.85rem 1.75rem;cursor:pointer;justify-self:start}
+button:hover{background:#243a63}
+.hint{font-size:.9rem;color:var(--mu)}
+.dir p{margin-top:.7rem}
+.dir a{color:#fff;font-weight:600;text-decoration:none;border-bottom:1px solid #c9b48a}
+footer{text-align:center;font-size:.95rem;color:var(--mu);padding:2rem}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.rv{opacity:0;transform:translateY(12px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+@media(max-width:760px){.ct{grid-template-columns:1fr}form{padding:1.25rem}.row{grid-template-columns:1fr;gap:.5rem;padding:1.25rem}nav{padding:.8rem 1.1rem}nav div{gap:.9rem}nav b{display:none}section.w{padding:4.5rem 1.25rem}}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}nav{transition:none}}
 </style>
 </head>
 <body>
@@ -106,7 +111,7 @@ a:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
   </div>
 </section>
 
-<div class="alt"><section class="w" id="contact">
+<div class="ctbg"><section class="w" id="contact">
   <h2 class="rv">Get in touch</h2>
   <p class="sub rv">Interested in working together, or just want to connect? Send a message and I will reply by email.</p>
   <div class="ct rv">
@@ -122,10 +127,10 @@ a:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
       <p><a href="mailto:anishajain3015@gmail.com">anishajain3015@gmail.com</a></p>
       <p><a href="tel:+61451663085">+61 451 663 085</a></p>
       <p><a href="https://www.linkedin.com/in/anisha-jain-fia-5b268b218/" target="_blank" rel="noopener">LinkedIn profile</a></p>
-      <p style="color:var(--mu)">Melbourne, Australia</p></div>
+      <p >Melbourne, Australia</p></div>
   </div>
 </section></div>
-<footer>&copy; 2026 Anisha Jain &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/anisha-jain-fia-5b268b218/" target="_blank" rel="noopener" style="color:var(--ac)">LinkedIn</a></footer>
+<footer>&copy; 2026 Anisha Jain &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/anisha-jain-fia-5b268b218/" target="_blank" rel="noopener" style="color:#14213d;font-weight:600">LinkedIn</a></footer>
 
 <script>
 document.getElementById("f").addEventListener("submit",function(ev){ev.preventDefault();
